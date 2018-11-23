@@ -164,7 +164,7 @@ class DBHelper {
       alt: restaurant.name,
       url: DBHelper.urlForRestaurant(restaurant)
       })
-      marker.tabIndex = '4';
+      // marker.setAttribute('tabindex','4');
       marker.addTo(newMap);
     return marker;
   } 

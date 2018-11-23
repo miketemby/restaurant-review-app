@@ -198,10 +198,10 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
-  more.tabIndex = '3';
-  li.append(more)
+  more.setAttribute('tabindex','3');
+  li.append(more);
 
-  return li
+  return li;
 }
 
 /**
@@ -211,6 +211,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   restaurants.forEach(restaurant => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
+    // marker.setAttribute('tabindex','4');
     marker.on("click", onClick);
     function onClick() {
       window.location.href = marker.options.url;
