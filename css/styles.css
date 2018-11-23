@@ -280,6 +280,12 @@ nav h1 a {
   order: 1;
   box-sizing: border-box;
 }
+
+/* added to keep size the same while changing markup from h1 to h2*/
+#restaurant-container h2{
+  font-size: 2em;
+}
+
 #reviews-container {
   padding: 30px 40px 80px;
   order: 3;
